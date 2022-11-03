@@ -16,7 +16,9 @@
 }
 
 .navbar h1 {
-    color: red;
+    font-size: 48px;
+    font-weight: 800;
+    color: rgb(88, 9, 9);
 }
 
 .menu {
@@ -72,4 +74,23 @@
     width: 100px;
     height: 40px;
     background-color: rgb(207, 169, 227);
+}
+
+.cardbtn {
+    background-color: rgb(95, 6, 15);
+    width: 200px;
+    height: 50px;
+    border-radius: 12px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardbtn span {
+    background-color: rgb(186, 39, 39);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
 }

@@ -3,5 +3,5 @@ export interface food{
     name:string, 
     ingrdeints:string[],
     price:number,
-    amount?:number
+    amount:number 
 }
