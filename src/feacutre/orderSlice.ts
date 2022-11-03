@@ -2,17 +2,17 @@ import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import type { RootState } from '../redux/store'
 import {food} from '../types/food'
-import { stat } from 'fs'
+
 
 // Define a type for the slice state
 
-
+interface props {
+  orders: food[]
+}
 
 // Define the initial state using that type
-const initialState = {
+const initialState :props= {
  orders:[]
-
-
 }
 
 export const orderSlice = createSlice({
@@ -21,7 +21,8 @@ export const orderSlice = createSlice({
   initialState,
   reducers: {
    addorder:(state, action:PayloadAction<food[]>)=>{
-    //console.log(action.payload)
+   state.orders=[...action.payload]
+   //console.log(state.orders)
    }
   },
 })

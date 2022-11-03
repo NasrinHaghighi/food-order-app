@@ -17,15 +17,18 @@ function Menu() {
 
     const handleList=(item:food ,amount:number)=>{
      const {id} =item
+
+
    const newArray= orderList.filter((foo)=>{
     return foo.id !== id
    })
+
    setOrderList([...newArray, {...item, amount:amount}])
 
 
  
     }
-console.log(orderList)
+//console.log(orderList)
     useEffect(() => {
     dispatch(addorder(orderList))
     }, [orderList])
