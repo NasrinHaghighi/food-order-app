@@ -1,38 +1,75 @@
 .App {
-  text-align: center;
+    text-align: center;
+    width: 1720px;
+    margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+    height: 280px;
+    background-image: url('../src/assets/meals.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar h1 {
+    color: red;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.menu {
+    border: 1px solid gray;
+    border-radius: 8px;
+    width: 800px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 30px 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.menuitem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ing {
+    display: flex;
+    font-size: 20px;
+    color: blue;
+    font-weight: 600;
+}
+
+.price {
+    font-size: 32px;
+    font-weight: 800;
+    color: green;
+}
+
+.ing:last-child span {
+    display: none;
+}
+
+.menuitem:last-child {
+    border-bottom: none;
+}
+
+.action {
+    display: flex;
+    flex-direction: column;
+}
+
+.action label {
+    font-size: 18px;
+    color: rgb(210, 207, 30);
+}
+
+.addbtn {
+    margin: 10px;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(207, 169, 227);
 }
