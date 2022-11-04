@@ -94,3 +94,107 @@
     height: 25px;
     margin-left: 10px;
 }
+
+
+/****************card*/
+
+.card {
+    width: 600px;
+}
+
+.carditem {
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.carditem:last-child {
+    border-bottom: none;
+}
+
+.carditem p {
+    font-size: 32px;
+    font-weight: 700;
+    color: rgb(119, 67, 63);
+    text-transform: uppercase;
+}
+
+.cardprice {
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardprice span {
+    margin-left: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    border: 2px solid rgb(119, 67, 63);
+    padding: 10px;
+}
+
+.cardaction {
+    display: flex;
+}
+
+.cardaction span {
+    width: 20px;
+    height: 10px;
+    border-radius: 8px;
+    border: 2px solid rgb(119, 67, 63);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.total {
+    border-top: 2px solid rgb(138, 44, 44);
+}
+
+.totalprice {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total span {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.btndiv {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.btndiv button {
+    padding: 10px;
+    border-radius: 12px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+.close {
+    background-color: #fff;
+    color: rgb(155, 72, 72);
+    border: 1px solid rgb(155, 72, 72);
+}
+
+.empty {
+    color: #fff;
+    background-color: rgb(211, 166, 30);
+}
+
+.pay {
+    color: #fff;
+    background-color: rgb(141, 41, 41);
+}
