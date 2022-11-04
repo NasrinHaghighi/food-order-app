@@ -1,6 +1,6 @@
 import React from 'react'
 import { food } from '../../types/food'
-import {decrement} from '../../feacutre/orderSlice'
+import {decrement, increment} from '../../feacutre/orderSlice'
 import { useAppSelector, useAppDispatch } from '../../redux/hooks'
 
 
@@ -11,10 +11,13 @@ function CardItem({item}:Props) {
 
     const dispatch=useAppDispatch()
 
-    const handleAmount=(id:number)=>{
+    const handleDecriment=(id:number)=>{
          dispatch(decrement(id))
     }
-
+   
+    const handleincriment=(id:number)=>{
+        dispatch(increment(id))
+   }
   return (
     <div className='carditem'>
         <div className='cardinfo'>
@@ -22,7 +25,8 @@ function CardItem({item}:Props) {
             <div className='cardprice'>{item.price} <span>*{item.amount}</span></div>
         </div>
         <div className='cardaction'>
-            <span onClick={()=>handleAmount(item.id)}>-</span><span >+</span>
+            <span onClick={()=>handleDecriment(item.id)}>-</span>
+            <span onClick={()=>handleincriment(item.id)}>+</span>
         </div>
     </div>
   )

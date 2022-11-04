@@ -32,9 +32,11 @@ export const orderSlice = createSlice({
 
    state.orders.find((item, index)=>{
    if(item.id === action.payload){
-   if(item.amount === 1){
-  state.orders.splice(index, 1)
-
+   if(item.amount ===1){
+  const newList =state.orders.filter((t)=>{
+  return t.id !==action.payload
+ })
+state.orders=[...newList]
    }if(item.amount>1){
     item.amount-=1
    }
@@ -42,14 +44,30 @@ export const orderSlice = createSlice({
    }
    
    })
-
- 
     },
+    increment:(state, action:PayloadAction<number>)=>{
+    state.orders.find((item, index)=>{
+    if(item.id === action.payload){
+    if(item.amount < 10){
+      item.amount+=1
+ 
+    }if(item.amount>10){
+     return false
+    }
+    
+    }
+    
+    })
+
+    },
+    clearCard:(state)=>{
+      state.orders=[]
+    }
 
   },
 })
 
-export const {addorder, decrement } = orderSlice.actions
+export const {addorder, decrement , increment, clearCard} = orderSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
 export const userOrders = (state: RootState) => state.orders
