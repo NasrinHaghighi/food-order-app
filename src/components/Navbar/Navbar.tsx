@@ -44,7 +44,7 @@ const sum = ordersArray.reduce((accumulator, curr) => {
         style={customStyles}
         contentLabel="Example Modal"
       >
-     <Card />
+     <Card setIsOpen={setIsOpen}/>
       </Modal>
     </div>
   )
